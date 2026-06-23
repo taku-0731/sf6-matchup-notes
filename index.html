@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>SF6 Matchup Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>SF6対策メモ</h1>
+
+    <select id="character" onchange="loadMemo()">
+      <option value="ryu">リュウ</option>
+      <option value="ken">ケン</option>
+      <option value="chunli">春麗</option>
+      <option value="gouki">豪鬼</option>
+    </select>
+
+    <h2 id="currentCharacter">現在の対策キャラ：リュウ</h2>
+
+    <p id="updatedAt">最終更新：なし</p>
+
+    <input
+  id="searchInput"
+  type="text"
+  placeholder="メモを検索"
+  oninput="searchMemo()"
+>
+
+<div id="searchResult"></div>
+
+    <h2>注意技</h2>
+    <textarea id="dangerMove" rows="5" cols="50" oninput="saveMemo()"></textarea>
+
+    <h2>確定反撃</h2>
+    <textarea id="punish" rows="5" cols="50" oninput="saveMemo()"></textarea>
+
+    <h2>立ち回り</h2>
+    <textarea id="neutral" rows="5" cols="50" oninput="saveMemo()"></textarea>
+
+    <h2>自分用メモ</h2>
+    <textarea id="freeMemo" rows="5" cols="50" oninput="saveMemo()"></textarea>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
